@@ -8,5 +8,24 @@ package ejercicio01;
  * - Múltiplos de 3 y de 5 a la vez por la palabra "fizzbuzz".
  */
 
+import java.util.ArrayList;
+
 public class FizzBuzz {
+    public static void main(String[] args) {
+        ArrayList<String> solucion = new ArrayList<>();
+        for (int i = 1; i < 101; i++) {
+            if (i % 3 == 0 && i % 5 == 0){
+            solucion.add(i - 1,"fizzbuzz");
+            } else if (i % 5 == 0) {
+            solucion.add(i -1,"buzz");
+            } else if (i % 3 == 0) {
+             solucion.add(i -1, "fizz");
+            }else {
+                solucion.add(Integer.toString(i));
+            }
+        }
+        for (int i = 0; i <solucion.size() ; i++) {
+            System.out.println(solucion.get(i));
+        }
+    }
 }
